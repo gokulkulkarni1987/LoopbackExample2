@@ -1,0 +1,36 @@
+{
+  "name": "roles",
+  "plural": "roles",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "scope": {
+      "type": "string",
+      "required": true
+    },
+    "operation": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "userRoles": {
+      "type": "hasMany",
+      "model": "user_role",
+      "foreignKey": "roleId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

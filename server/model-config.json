@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ngo": {
+    "dataSource": "SociallyGood",
+    "public": true
+  },
+  "chapter": {
+    "dataSource": "SociallyGood",
+    "public": true
+  },
+  "ngoUser": {
+    "dataSource": "SociallyGood",
+    "public": true
+  },
+  "event": {
+    "dataSource": "SociallyGood",
+    "public": true
+  },
+  "roles": {
+    "dataSource": "SociallyGood",
+    "public": true
+  },
+  "user_role": {
+    "dataSource": "SociallyGood",
+    "public": true
+  }
+}

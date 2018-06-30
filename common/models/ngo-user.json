@@ -1,0 +1,39 @@
+{
+  "name": "ngoUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "userRoles": {
+      "type": "hasMany",
+      "model": "user_role",
+      "foreignKey": "ngoUserId",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "ngos": {
+      "type": "hasOne",
+      "model": "ngo",
+      "foreignKey": "ngoUserId",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
