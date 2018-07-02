@@ -14,25 +14,25 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "SociallyGood"
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "SociallyGood",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "SociallyGood",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "SociallyGood",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "SociallyGood",
     "public": false
   },
   "ngo": {
