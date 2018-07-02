@@ -35,7 +35,7 @@ module.exports = function(Ngouser) {
     cb(null, true);
   };
 
-  Ngouser.remoteMethod('assignNgoEventAdmin', {
+  Ngouser.remoteMethod('assignAsNGOEventAdmin', {
     accepts: [
       {arg: 'ngoUserId', type: 'string'},
       {arg: 'ngoId', type: 'string'},
@@ -51,7 +51,7 @@ module.exports = function(Ngouser) {
     cb(null, true);
   };
 
-  Ngouser.remoteMethod('assignChapterEventAdmin', {
+  Ngouser.remoteMethod('assignAsChapterEventAdmin', {
     accepts: [
       {arg: 'ngoUserId', type: 'string'},
       {arg: 'chapterId', type: 'string'},
@@ -67,7 +67,7 @@ module.exports = function(Ngouser) {
     cb(null, true);
   };
 
-  Ngouser.remoteMethod('assignChapterEventAdminAssistant', {
+  Ngouser.remoteMethod('assignAsChapterEventAdminAssistant', {
     accepts: [
       {arg: 'ngoUserId', type: 'string'},
       {arg: 'chapterId', type: 'string'},
@@ -89,7 +89,7 @@ module.exports = function(Ngouser) {
       {arg: 'eventId', type: 'string'},
     ],
     returns: {args: 'success', type: 'boolean'},
-    http: {path: '/assignAsEventCoordinator', verb: 'post'},
+    http: {path: '/assignEventCoordinator', verb: 'post'},
   });
   /* assign as Event Co ordinator end */
 };

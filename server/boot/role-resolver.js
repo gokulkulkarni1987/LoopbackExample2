@@ -4,6 +4,7 @@ module.exports = (app) => {
   var Role = app.models.Role;
 
   Role.registerResolver('eventAdmin', (role, context, cb) => {
+    console.log('>>>>>>>>>>>>>>>> eventAdmin role called');
     function reject() {
       process.nextTick(() => cb(null, false));
     };
@@ -17,7 +18,7 @@ module.exports = (app) => {
       if (err) {
         cb(null, false);
       }
-      Role.find({where: {id: userRoleResult.roleId}}, function(err, roleResult) {
+      Role.find({where: {_id: userRoleResult.roleId}}, function(err, roleResult) {
         if (err) {
           cb(null, false);
         }
